@@ -1,6 +1,5 @@
 import { BillingComponent } from '@gitroom/frontend/components/billing/billing.component';
 import { useUser } from '@gitroom/frontend/components/layout/user.context';
-import { useVariables } from '@gitroom/react/helpers/variable.context';
 import { useT } from '@gitroom/react/translation/get.transation.service.client';
 import { Logo } from '@gitroom/frontend/components/new-layout/logo';
 import { LogoutComponent } from '@gitroom/frontend/components/layout/logout.component';
@@ -9,7 +8,6 @@ import { OrganizationSelector } from '@gitroom/frontend/components/layout/organi
 
 export const BillingAfter = () => {
   const user = useUser();
-  const { isGeneral, billingEnabled } = useVariables();
   const t = useT();
   return (
     <div className="flex-1 rounded-3xl px-0 py-[17px] flex flex-col max-w-[1440px] mx-auto">
@@ -23,12 +21,12 @@ export const BillingAfter = () => {
         <h1 className="text-3xl [@media(max-width:1024px)]:text-xl">
           {t(
             'join_10000_entrepreneurs_who_use_postiz',
-            'Join 10,000+ Entrepreneurs Who Use Postiz'
+            'Start using DiscoPost'
           )}
           <br />
           {t(
             'to_manage_all_your_social_media_channels',
-            'To Manage All Your Social Media Channels'
+            'to manage all your social media channels'
           )}
         </h1>
         <br />
